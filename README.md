@@ -64,11 +64,5 @@ The dataset is shared back for final review. If no blockers are found, the work 
 
 ---
 
-## What’s in this repo
-- `prompts/auction_reminder_copy_prompt.md` — a public-safe prompt example for generating auction reminder copy (title, subject-line piece, preheader)
-- `templates/` — reusable templates for prompt specs, quality rubrics, and launch readiness
-
----
-
 ## Disclaimer
 This repository contains general process guidance and example prompt patterns. It does not include proprietary policies, internal tools, or confidential data.
