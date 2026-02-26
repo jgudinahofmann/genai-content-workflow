@@ -1,72 +1,74 @@
 # A Smarter Workflow for AI-Generated Content
 
-A scalable, cross-functional process for producing high-quality AI-generated content with clear ownership, consistency, and measurable outcomes.
+A practical, cross-functional workflow for producing high-quality AI-generated content with clear ownership, consistency, and measurable outcomes.
 
 ## Why this exists
-The hard part of AI-generated content isn’t generating text — it’s ensuring outputs consistently align with:
-- business goals
+Generating text is the easy part. The hard part is ensuring every output consistently aligns with:
+- product objectives
 - tone and style guidelines
-- safety and compliance constraints
+- safety/compliance constraints
 - quality standards that scale
 
-This workflow is designed to reduce rework, clarify ownership, and make iteration faster *before* heavier science/engineering work begins.
+This workflow reduces rework, clarifies ownership, and accelerates iteration before larger-scale dataset work begins.
 
 ---
 
 ## The Workflow
 
-### 1) PRD includes “AI content requirements”
-The Product Owner starts with a PRD that includes:
-- target use-case and context
+### 1) PRD includes AI content requirements
+The Product Owner starts with a PRD that captures both business context and technical requirements, including:
+- target user intent and context
 - tone/style requirements
 - constraints (length, structure, disallowed content)
 - acceptance criteria and quality bar
-- evaluation approach (how we’ll judge “good”)
+- evaluation approach (how “good” is judged)
 
-### 2) A universal base prompt is defined and maintained
-A central owner (often a Science/ML team) maintains a **base system prompt** that enforces shared constraints:
-- safety / brand guidelines
+### 2) A universal base prompt is maintained
+A central owner (often an ML/Science team) maintains a **base system prompt** that enforces shared constraints:
+- safety and brand guidelines
 - formatting rules and structural requirements
 - consistent tone anchors
 - hard constraints (e.g., character limits)
 
-All project prompts build on top of this base prompt so requirements are inherited consistently.
+All project prompts build on top of this base prompt so constraints are inherited consistently.
 
-### 3) Cross-functional prompt iteration using an LLM + a small sample set
-Product and business partners iterate on a project-specific prompt using:
+### 3) Cross-functional iteration with a small sample set
+Product + business partners iterate on project-specific prompts using:
 - the base prompt
-- project requirements from the PRD
-- a small sample input set (≈20 real-ish examples)
+- requirements from the PRD
+- a small sample input set (≈20 examples)
 
-The goal is to converge on tone, structure, and correctness *before* requesting larger-scale dataset work.
+The goal is to converge on clarity, tone, and correctness before requesting larger dataset work.
 
-### 4) Final prompt + expanded sample set for dataset work
+### 4) Final prompt + expanded sample set
 Once the prompt is approved, the owner provides:
 - the final prompt
-- an expanded input sample set (≈100 items)
-- any edge cases to include
+- an expanded input set (≈100 items)
+- edge cases and exclusions to include
 
 ### 5) Dataset creation + feedback loop
-The Science/ML team uses the sample set to generate a training/evaluation dataset with:
-- diversity
-- consistency
+The ML/Science team generates a dataset ensuring:
+- diversity and coverage
 - guideline adherence
+- consistency in tone/format
 
-They share results back for final review. If no blockers are found, the work proceeds toward production.
+The dataset is shared back for final review. If no blockers are found, the work proceeds toward production.
 
 ---
 
 ## Why this framework works
-- **Alignment early:** requirements and ownership are defined up front  
-- **Efficiency:** iteration happens cheaply before heavy dataset generation  
-- **Consistency:** base prompt ensures shared constraints across projects  
-- **Scalability:** repeatable across campaigns/verticals with minimal changes  
+- **Alignment early:** requirements and ownership are defined up front
+- **Efficiency:** iteration happens cheaply before heavy dataset generation
+- **Consistency:** base prompt enforces shared constraints across projects
+- **Scalability:** repeatable across campaigns/verticals with minimal changes
 
 ---
 
-## Templates 
-See `/templates` for:
-- Prompt spec
-- Dataset request checklist
-- Quality rubric
-- Launch readiness checklist
+## What’s in this repo
+- `prompts/auction_reminder_copy_prompt.md` — a public-safe prompt example for generating auction reminder copy (title, subject-line piece, preheader)
+- `templates/` — reusable templates for prompt specs, quality rubrics, and launch readiness
+
+---
+
+## Disclaimer
+This repository contains general process guidance and example prompt patterns. It does not include proprietary policies, internal tools, or confidential data.
