@@ -1,68 +1,22 @@
-# A Smarter Workflow for AI-Generated Content
+# GenAI Content Workflow (Public-Safe Playbook)
 
-A practical, cross-functional workflow for producing high-quality AI-generated content with clear ownership, consistency, and measurable outcomes.
+This repository contains **public-safe** artifacts that demonstrate how to design and scale an AI-generated content workflow:
+- a cross-functional operating model
+- practical evaluation methods (human rubric + error taxonomy)
+- launch readiness guardrails (monitoring + rollback)
+- a template prompt pattern (generic; not production IP)
 
-## Why this exists
-Generating text is the easy part. The hard part is ensuring every output consistently aligns with:
-- product objectives
-- tone and style guidelines
-- safety/compliance constraints
-- quality standards that scale
+> **Disclaimer:** This repo shares generalized process and templates. It does not contain proprietary prompts, internal tools, or confidential policies.
 
-This workflow reduces rework, clarifies ownership, and accelerates iteration before larger-scale dataset work begins.
+## Contents
+- `docs/workflow_ai_generated_content.md` — workflow article (anonymized)
+- `evaluation/human_rubric.md` — scoring rubric for reviewers
+- `evaluation/error_taxonomy.md` — error categories for consistent labeling
+- `launch/launch_checklist.md` — launch readiness checklist (quality, safety, monitoring, rollback)
+- `templates/public_prompt_template.md` — a generic prompt template (safe to share)
 
----
-
-## The Workflow
-
-### 1) PRD includes AI content requirements
-The Product Owner starts with a PRD that captures both business context and technical requirements, including:
-- target user intent and context
-- tone/style requirements
-- constraints (length, structure, disallowed content)
-- acceptance criteria and quality bar
-- evaluation approach (how “good” is judged)
-
-### 2) A universal base prompt is maintained
-A central owner (often an ML/Science team) maintains a **base system prompt** that enforces shared constraints:
-- safety and brand guidelines
-- formatting rules and structural requirements
-- consistent tone anchors
-- hard constraints (e.g., character limits)
-
-All project prompts build on top of this base prompt so constraints are inherited consistently.
-
-### 3) Cross-functional iteration with a small sample set
-Product + business partners iterate on project-specific prompts using:
-- the base prompt
-- requirements from the PRD
-- a small sample input set (≈20 examples)
-
-The goal is to converge on clarity, tone, and correctness before requesting larger dataset work.
-
-### 4) Final prompt + expanded sample set
-Once the prompt is approved, the owner provides:
-- the final prompt
-- an expanded input set (≈100 items)
-- edge cases and exclusions to include
-
-### 5) Dataset creation + feedback loop
-The ML/Science team generates a dataset ensuring:
-- diversity and coverage
-- guideline adherence
-- consistency in tone/format
-
-The dataset is shared back for final review. If no blockers are found, the work proceeds toward production.
-
----
-
-## Why this framework works
-- **Alignment early:** requirements and ownership are defined up front
-- **Efficiency:** iteration happens cheaply before heavy dataset generation
-- **Consistency:** base prompt enforces shared constraints across projects
-- **Scalability:** repeatable across campaigns/verticals with minimal changes
-
----
-
-## Disclaimer
-This repository contains general process guidance and example prompt patterns. It does not include proprietary policies, internal tools, or confidential data.
+## How to use
+1. Start with the workflow doc and adapt roles/ownership to your org.
+2. Use the rubric + taxonomy to build a repeatable evaluation loop.
+3. Gate launches with the checklist (and keep the rollback plan explicit).
+4. Use the public prompt template as a starting point for non-sensitive projects.
